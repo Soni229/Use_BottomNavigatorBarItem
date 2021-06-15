@@ -4,7 +4,18 @@ import 'reminders.dart';
 import 'birthdays.dart';
 
 void main(List<String> args) {
-  runApp(ClasseHome());
+  runApp(HomePage());
+}
+
+class HomePage extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: "Bar",
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: ClasseHome());
+  }
 }
 
 class ClasseHome extends StatefulWidget {
@@ -30,6 +41,7 @@ class _ClasseHomeState extends State<ClasseHome> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
